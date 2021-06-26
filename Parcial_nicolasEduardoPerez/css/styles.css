@@ -15,10 +15,17 @@ body {
 
 table {
     border-collapse: separate;
-    width: 90%;
     box-shadow: 5px -8px 3px 1px rgb(4, 73, 73, 116);
-    /*Sombras*/
     border: lightseagreen 5px solid;
+    width: 90%;
+}
+
+.superior {
+    align-items: center;
+    box-sizing: content-box;
+    border-collapse: separate;
+    width: 100%;
+
 }
 
 .btnAgregar {
@@ -33,6 +40,7 @@ table {
     border: 1px solid #cccccc;
     cursor: pointer;
 }
+
 
 input[type=text],
 [type=date] {

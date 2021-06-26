@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link type="text/css" rel="stylesheet" href="css/styles.css">
-    <script type="text/javascript" src="./js/Formulario.js"> </script>
+    <script type="text/javascript" src="./js/Funciones.js"> </script>
     <script type="text/javascript" src="./js/Vehiculo.js"> </script>
     <script type="text/javascript" src="./js/Auto.js"> </script>
     <script type="text/javascript" src="./js/Camioneta.js"> </script>
     <script type="text/javascript" src="./js/Main.js"> </script>
-    <script type="text/javascript" src="./js/Main.js"> </script>
+    
     
     <title>Lista de Vehiculos</title>
 </head>
@@ -24,31 +24,45 @@
     <br>
     <h2>Filtros</h2>
     <br>
-    <div >
-        <h5>Filtrar por: </h5>
-        <select name="tipo" id="selectTipo">
-            <option value="auto">Auto</option>
-            <option value="camioneta">Camioneta</option>
-        </select>
-    </div>
-        <br>
-        <h5>  Promedio de precios: </h5>
-        <input type="text" name="promedio" id="promedio">
-        <input type="button" value="Calcular Promedio" id="btnCalcularProm">
+   <div class="superior">
+    <h5>Filtrar por: </h5>
+    <select name="tipo" id="selectTipo">
+        <option value="auto">Auto</option>
+        <option value="camioneta">Camioneta</option>
+    </select>
 
-        <br>
-        <h3>Campos mostrados</h3>
-        <h4> Tildar los campos a mostrar</h4>
-    
-        <br>
-        <h1>Lista de Vehiculos</h1>
+    <br>
+    <h5>  Promedio de precios: </h5>
+    <input type="text" name="promedio" id="promedio" style="position:static;  width:20%; ">
+    <input type="button" value="Calcular Promedio" id="btnCalcularProm">
+</div>
+    <br>
+    <h3>Campos mostrados</h3>
+    <h4> Tildar los campos a mostrar</h4>
+    <input type="checkbox" name="id" id="mostrarId" value="id">
+    <label for="id">Id</label>
+    <input type="checkbox" name="marca" id="mostrarMarca" value="marca">
+    <label for="marca">Marca</label>
+    <input type="checkbox" name="modelo" id="mostrarModelo" value="modelo">
+    <label for="modelo">Modelo</label>
+    <input type="checkbox" name="precio" id="mostrarPrecio" value="precio">
+    <label for="precio">Precio</label>
+    <br>
+    <h1>Lista de Vehiculos</h1>
     
     <div class="contenedoraflex">
     
         <br>
         <div class="contenedorGrilla" id="contGrilla">
                
-            <h3>Agregar un auto.</h3> 
+            <h3>Agregar Vehiculo.</h3>
+            
+            
+
+            <br>
+            <br>
+            <label for="id">Id</label>
+            <input type="text" >
             <label for="marca">Marca:</label>
             <br>
             <input type="text" maxlength="50" class="string" id="marca" name="marca" placeholder="Ingrese marca" >
@@ -57,29 +71,53 @@
             <br>
             <input type="text" maxlength="50" class="string" id="modelo" name="modelo" placeholder="Ingrese modelo" >
             <br>
-            <label for="año">Año</label>
+            <label for="precio" >Precio</label>
             <br>
-            <select name="años" id="años" class="seleccion">
-                
+            <input type="number" max="10000000" min="2"name="precio" id="precio" class="seleccion" placeholder="Ingrese precio">
+            <br>
+            <label for="tipoVehiculo">Tipo</label>
+            <select name="tipoVehiculo" id="NselectTipo">
+                <option value="auto" >Auto</option>
+                <option value="camioneta">Camioneta</option>
+            </select>
+            <br>
+            <br>
+            <br>
             <input class="botonGuardar" type="button" id="btnGuardar" value="Guardar">
             <input class="botonCancelar" type="button" id="btnCancelar" value="Cancelar">
+            
+            <div id="fCamioneta" hidden>
+
+                <label for="tipo">Camioneta</label>
+
+                <select name="tipoCamioneta" id="tipoCamioneta">
+                    <option value="si">Es 4x4</option>
+                    <option value="no">No es 4x4</option>
+                </select>
+                <br>
+            </div>
+
+            <div id="fAuto" hidden>
+
+                <label for="tipo">Puertas</label>
+
+                <input type="number" max="5" min="2" id="cantidadPuertas" class="sinError" name="puertas" placeholder="Ingrese cantidad de puertas">
+            </div>
+                
+            
         </div>
 
     </div>
 
-    <div class="Cargando" id="Cargando">
 
-        <img src="./img/cargando.jpg">
-
-    </div>
-
-    <table id="tabla" class="titulo">
+    <table id="tabla" class="formulario">
         <thead id="tCabecera">
             <tr>
-                <th style="display: none;">Id</th>
-                <th>Marca</th>
-                <th>Modelo</th>
-                <th>Año</th>
+                <th id="thId">Id</th>
+                <th id="thMarca">Marca</th>
+                <th id="thModelo" >Modelo</th>
+                <th id="thPrecio">Precio</th>
+                <th id="thAccion" >Accion</th>
             </tr>
         </thead>
         <tbody id="tCuerpo">
