@@ -1,0 +1,86 @@
+margin da espacios entre la etiqueta px arriba px derecha px abajo px izquierda -- del elemento para afuera-- es la distancia del elemento hacia afuera y otros elementos
+border - para cambiarle el color al borde o se lo puede sacar con none
+width -- es para agrandar a lo ancho
+height -- para agendar a lo alto
+cursor: pointer --- para mostrar la manito en un boton
+border-radius: px --- para redondear los bordes
+padding: px px px px --- es como el margen pero para adentro -- del borde del elemento hacia adentro, se puede mover el texto de adentro
+
+.boton:hover{ -- a los elementos que tengan la clase boton y se le pasa el mouse por arriba cambia el color al definido abajo
+backgraun color mas oscuro 
+}
+
+display -- es el posicionamiento
+
+elemento div -- es un contenedor que no se ven, ocupa el 100 % de lo ancho y el minimo de alto, el alto del contenido que tenga, si no tiene nada no se ve
+
+box-sizing : border-box;  -- sirve para que los elementos que esten dentro no sobresalgan
+
+hay conoponentes in line como un parrafo o inblock como un textbox
+in line ocupa el 100 % de la pantalla
+display: incline-bock; 
+margin: auto; da un margen de forma automatica, lo posiciona en el medio de la pantalla
+el margin tambien se usa para estirar el contenedor y que por ej el label quede mas ancho o alto
+top = parte de arriba
+buton = parte de abajp
+box-shadow: px px px px color;
+
+tablas
+border-collapse: collapse; -- sirve para unir los td o th, en el caso del encabezado que queden las columnas sin espacios
+text-align: left; -- alinea el contenido hacia la izquierda
+con el padding se le da un espacio para que las filas no queden pegadas
+margin top para que se separe de la parte de arriba
+border: px (ancho del borde) solid (ej) color (rojo)
+
+POSICIONAMIENTO:
+div- contenedor basico
+usar porcentace o rem
+unidad de medida rem - es una unidad de medida relativa no a su elemento padre, sino al elemento root(pagina)
+al margin se le puede establer un numero definido de espacio para arriba y abajo y auto para los costados
+si se pone el paddin y o border y no se pone el border-box el espacio del paddin lo va a tomar hacia afuera si no tiene espacio hacia adentro
+
+position -- static es el valor por defecto. relative sirve posicionar uno encimade otro y si usa right, bottom, top, left para posicionarlo
+para usar el relative tiene que tener mas de un contenedor con el position relative y el que se mueve es el segundo
+
+se puede poner un contenedor absolute dentro de un relative y se puede mover el relative (ej boton dentro de la tabla)
+
+position fixed -- queda anclado hacia la pantalla, sobre todo el resto -- es para poner el contenedor frente a todos, queda fijo (es para crear la ventana de alta) se puede setear right, bottom, top, left.
+si se le indica posicion de derecha y arriba queda en el medio
+
+
+FLEX BOX - posicionamiento
+contenedor con display:flex; -- es para que se pueda manipular lo que tiene adentro - siempre se manipula solo el div padre
+para esto se usan: 
+ - flex-direction: row, column
+ - justify-content: flex-start, 
+ - aling-items: stretch,
+
+flex-wrap: wrap; -- se usa para que cuando la pantalla se achique respete el tamaño predeterminado de los elementos hijo
+y los posisciona abajo a medida que se achica
+
+flex-grow: numero; -- se aplica a los div hijos, es para elegir que tamaño del espacio disponible va a ocupar cada uno
+
+height: 50vh;
+
+
+@keyframes mostrar {-- animaciones
+	from{ //desde 
+		tamaño
+		color
+	}
+	to{ //hasta
+		tamño
+		color
+	}
+}
+
+
+para poner la animacion en css
+animation-name: mostrar(nombre de la animacion angterior);
+animation-duration: 3s; //duracion de la animacion
+
+
+
+
+hastta video 2021-04-30 20-25 visto
+falta ultimos 2 videos de promesas 2021-05-21 19 y 2021-05-21  20

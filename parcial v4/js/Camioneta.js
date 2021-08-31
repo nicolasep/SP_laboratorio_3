@@ -16,15 +16,17 @@ var __extends = (this && this.__extends) || (function () {
 })();
 var Camioneta = /** @class */ (function (_super) {
     __extends(Camioneta, _super);
-    function Camioneta(id, marca, modelo, precio, esCuatroXCuatro) {
+    function Camioneta(id, marca, modelo, precio, cuatroXcuatro) {
         var _this = _super.call(this, id, marca, modelo, precio) || this;
-        _this.esCuatroXCuatro = esCuatroXCuatro;
+        _this.cuatroXcuatro = cuatroXcuatro;
         return _this;
     }
-    Camioneta.prototype.CamionetaToJSON = function () {
-        var aux = _super.prototype.VehiculoToString.call(this).split(" ");
-        var jsonAux = { "id": Number(aux[0]), "marca": aux[1], "modelo": aux[2], "precio": Number(aux[3]), "esCuatroXCuatro": this.esCuatroXCuatro };
-        return JSON.parse(JSON.stringify(jsonAux));
-    };
+    Object.defineProperty(Camioneta.prototype, "CuatroXcuatro", {
+        get: function () {
+            return this.cuatroXcuatro;
+        },
+        enumerable: false,
+        configurable: true
+    });
     return Camioneta;
 }(Vehiculo));

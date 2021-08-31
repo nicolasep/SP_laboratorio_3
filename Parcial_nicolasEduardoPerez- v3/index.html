@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcial Vehiculos</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <!---->
+    <script src="./js/Vehiculo.js"></script>
+    <script src="./js/Auto.js"></script>
+    <script src="./js/Camioneta.js"></script>
+    <script src="./js/Main.js"></script>
+</head>
+<body>
+    <br>
+    <input type="button" value="Alta" id="btnAgregar" class="botonAgregar">
+    <br>
+    <br>
+    <div class="separador">
+        <br>
+    </div>
+    <h1 class="titulo">Filtros</h1>
+    <div class="separador">
+        <br>
+    </div>
+    <div class="opciones" >
+        <label for="selectTipo" class="inOpciones">Filtrar por: </label>
+        <select name="selectTipo" id="selectTipo" class="inOpciones">
+            <option value="todos">Seleccionar tipo</option>
+            <option value="auto">Auto</option>
+            <option value="camioneta">Camioneta</option>
+        </select>
+        <label for="btnPromedio"class="inOpciones">Promedio de precios:</label>
+        <input type="text" id="inPromedio"class="inOpciones">
+        <input type="button" value="Calcular Promedio" id="btnPromedio"class="inOpciones">
+
+    </div>
+    <div class="tituloCampos">
+        <h1>Campos mostrados</h1>
+        <h2>Tildar los campos a mostrar</h2>
+    </div>
+    
+    <div class="separador">
+        <br>
+    </div>
+    <div class="checkMostrar">
+        <input type="checkbox" name="checkId" id="mostrarId">
+        <label for="chekId">Id</label>
+        <input type="checkbox" name="checkMarca" id="mostrarMarca">
+        <label for="chekMarca">Marca</label>
+        <input type="checkbox" name="checkModelo" id="mostrarModelo">
+        <label for="chekModelo">Modelo</label>
+        <input type="checkbox" name="checkPrecio" id="mostrarPrecio">
+        <label for="chekPrecio">Precio</label>
+    </div>
+    <div class="separador">
+        <br>
+    </div>
+    <h1 class="titulo">Lista de Vehiculos</h1>
+    <div class="separador">
+        <br>
+    </div>
+
+    <div id="contGrilla" class="grilla" hidden>
+        <h3>Alta Vehiculo</h3>
+        <div class="separador">
+            <br>
+        </div>
+        <label for="id">Id</label>
+        <input type="text" disabled name="id">
+        <label for="marca">Marca</label>
+        <input type="text" name="marca" placeholder="Ingrese marca" id="gMarca">
+        <label for="modelo">Modelo</label>
+        <input type="text" name="modelo" placeholder="Ingrese modelo" id="gModelo">
+        <label for="precio">Precio</label>
+        <input type="number" name="precio" id="gPrecio">
+        <label for="gSelect">Tipo</label>
+        <select name="gSelect" id="gSelect">
+            <option value="todos" selected>Seleccione tipo</option>
+            <option value="auto">Auto</option>
+            <option value="camioneta">Camioneta</option>
+        </select>
+
+        <div id="selectAuto" hidden>
+            <label for="puertas">Puertas</label>
+            <input type="number" name="puertas" id="cantidadPuertas" minlength="2" maxlength="5">
+        </div>
+    
+        <div id="selectCamioneta" hidden>
+            <label for="cuatroXcuatro">Selecione modelo</label>
+            <select name="cuatroXcuatro" id="selectCuatroXcuatro">
+                <option value="es4x4">Es 4 x 4</option>
+                <option value="no4x4">No es 4 x 4</option>
+            </select>
+        </div>
+        <div class="divBoton">
+            <input type="button" value="Guardar" id="btnGuardar">
+            <input type="button" value="Cancelar" id="btnCancelar">
+        </div>
+    </div>
+
+    
+    <div class="cont" id="tabla">
+        <table>
+            <thead id="tCabecera">
+                <tr>
+                    <th>Id</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Precio</th>
+                    <th>Accion</th>
+                   
+                </tr>
+            </thead>
+            <tbody id="tCuerpo" class="cuerpo">
+                <tr>
+                    <td>2</td>
+                    <td>fiat</td>
+                    <td>palio</td>
+                    <td>5646</td>
+                    <td>borrar</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>fiat</td>
+                    <td>palio</td>
+                    <td>5646</td>
+                    <td>borrar</td>
+                
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>

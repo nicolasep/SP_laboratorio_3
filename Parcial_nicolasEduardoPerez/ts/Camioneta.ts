@@ -5,5 +5,12 @@ class Camioneta extends Vehiculo {
         super(id, marca, modelo, precio);
         this.esCuatroXCuatro = esCuatroXCuatro;
     }
+    public CamionetaToJSON():JSON
+    {
+        let aux = super.VehiculoToString().split(" ");
+        let jsonAux = {"id":Number(aux[0]),"marca":aux[1],"modelo":aux[2],"precio":Number(aux[3]),"esCuatroXCuatro":this.esCuatroXCuatro};
+
+        return JSON.parse(JSON.stringify(jsonAux));
+    }
 
 }

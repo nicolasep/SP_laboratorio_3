@@ -1,16 +1,18 @@
-class Vehiculo {
-    private id: number;
-    private marca: string;
-    private modelo: string;
-    private precio: number;
 
-    public constructor(id: number, marca: string, modelo: string, precio: number) {
+class Vehiculo
+{
+    private id:number;
+    private marca:string;
+    private modelo:string;
+    private precio:number;
+
+    public constructor(id:number,marca:string,modelo:string,precio:number)
+    {
         this.id = id;
         this.marca = marca;
         this.modelo = modelo;
         this.precio = precio;
     }
-
     public get GetId():number
     {
         return this.id;
@@ -26,9 +28,5 @@ class Vehiculo {
     public get GetPrecio():number
     {
         return this.precio;
-    }
-    public VehiculoToString():string
-    {
-        return this.GetId + " "+ this.GetMarca + " "+ this.GetModelo+ " "+this.GetPrecio;
     }
 }

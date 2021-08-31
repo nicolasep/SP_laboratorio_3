@@ -21,5 +21,10 @@ var Auto = /** @class */ (function (_super) {
         _this.cantidadPuertas = cantidadPuertas;
         return _this;
     }
+    Auto.prototype.AutoToJSON = function () {
+        var aux = _super.prototype.VehiculoToString.call(this).split(" ");
+        var jsonAux = { "id": Number(aux[0]), "marca": aux[1], "modelo": aux[2], "precio": Number(aux[3]), "cantidadPuertas": Number(this.cantidadPuertas) };
+        return JSON.parse(JSON.stringify(jsonAux));
+    };
     return Auto;
 }(Vehiculo));

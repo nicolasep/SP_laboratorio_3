@@ -14,17 +14,12 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var Camioneta = /** @class */ (function (_super) {
-    __extends(Camioneta, _super);
-    function Camioneta(id, marca, modelo, precio, esCuatroXCuatro) {
+var Auto = /** @class */ (function (_super) {
+    __extends(Auto, _super);
+    function Auto(id, marca, modelo, precio, cantidadPuertas) {
         var _this = _super.call(this, id, marca, modelo, precio) || this;
-        _this.esCuatroXCuatro = esCuatroXCuatro;
+        _this.cantidadPuertas = cantidadPuertas;
         return _this;
     }
-    Camioneta.prototype.CamionetaToJSON = function () {
-        var aux = _super.prototype.VehiculoToString.call(this).split(" ");
-        var jsonAux = { "id": Number(aux[0]), "marca": aux[1], "modelo": aux[2], "precio": Number(aux[3]), "esCuatroXCuatro": this.esCuatroXCuatro };
-        return JSON.parse(JSON.stringify(jsonAux));
-    };
-    return Camioneta;
+    return Auto;
 }(Vehiculo));

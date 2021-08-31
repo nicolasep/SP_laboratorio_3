@@ -5,5 +5,12 @@ class Auto extends Vehiculo {
         super(id, marca, modelo, precio);
         this.cantidadPuertas = cantidadPuertas;
     }
+    public AutoToJSON():JSON
+    {
+        let aux = super.VehiculoToString().split(" ");
+        let jsonAux = {"id":Number(aux[0]),"marca":aux[1],"modelo":aux[2],"precio":Number(aux[3]),"cantidadPuertas":Number(this.cantidadPuertas)};
+
+        return JSON.parse(JSON.stringify(jsonAux));
+    }
 
 }

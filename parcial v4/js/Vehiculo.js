@@ -34,8 +34,5 @@ var Vehiculo = /** @class */ (function () {
         enumerable: false,
         configurable: true
     });
-    Vehiculo.prototype.VehiculoToString = function () {
-        return this.GetId + " " + this.GetMarca + " " + this.GetModelo + " " + this.GetPrecio;
-    };
     return Vehiculo;
 }());
